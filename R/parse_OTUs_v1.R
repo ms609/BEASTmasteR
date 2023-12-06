@@ -1,11 +1,9 @@
-library(XML)
-
-
 #######################################################
 # Make OTUs list
 #######################################################
 
 # For use in sapply by make_XMLs_for_OTUs
+#' @import XML
 make_XML_for_OTU_id <- function(OTU)
 	{
 	xmlNode(name="taxon", attrs=list(id=OTU, spec="Taxon"))

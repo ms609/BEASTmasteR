@@ -1,0 +1,37 @@
+Package: BeastMasteR
+Title: Write Beast2 XML (especially morphology/tip-dating)
+Version: 0.0.0.9000
+Authors: Code by nmatzke; packaged by Martin R. Smith 
+License: GPL3
+Description: To follow.
+URL:
+  https://github.com/ms609/BEASTmasteR,
+  https://github.com/nmatzke/BEASTmasteR,
+  http://phylo.wikidot.com/beastmaster/
+Depends: R (>= 3.5.0)
+Imports:
+  grDevices,
+  stats,
+  utils,
+  XML,
+Suggests:
+  knitr,
+  rmarkdown,
+  spelling,
+  testthat,
+Config/Needs/github-actions:
+  callr,
+  pkgbuild,
+  rcmdcheck,
+Config/Needs/coverage: covr
+Config/Needs/memcheck: devtools
+Config/Needs/metadata: codemetar
+Config/Needs/website: pkgdown
+RdMacros: Rdpack
+SystemRequirements: C99
+ByteCompile: true
+Encoding: UTF-8
+Language: en-GB
+VignetteBuilder: knitr
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
