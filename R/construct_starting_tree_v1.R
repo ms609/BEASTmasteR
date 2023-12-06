@@ -545,7 +545,8 @@ add_in_clades <- function(tmp_tree, names_of_groups, list_of_subtrees_w_good_bra
 	} # END add_in_clades <- function()
 
 
-
+#' Construct starting tree
+#' 
 #' @param OTUs_df A data.frame with, at least, columns labeled 
 #' "OTUs" (tip names), 
 #' "use" (which OTUs will be used, "yes" or "no"; blanks etc. mean "yes"), and 
