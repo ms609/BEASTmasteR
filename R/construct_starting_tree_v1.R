@@ -546,7 +546,7 @@ add_in_clades <- function(tmp_tree, names_of_groups, list_of_subtrees_w_good_bra
 
 
 
-#' @OTUs_df=NULL A data.frame with, at least, columns labeled 
+#' @param OTUs_df A data.frame with, at least, columns labeled 
 #' "OTUs" (tip names), 
 #' "use" (which OTUs will be used, "yes" or "no"; blanks etc. mean "yes"), and 
 #' "tipdate" (the desired tipdates; use 0, if all the tips are contemporaneous)
@@ -555,7 +555,7 @@ add_in_clades <- function(tmp_tree, names_of_groups, list_of_subtrees_w_good_bra
 #' column headers.  This is the exact command used by construct_starting_tree():
 #' readWorksheetFromFile(xlsfn, sheet="OTUs", startRow=15)
 #'
-#' @nodes_df=NULL A data.frame with, at least, columns labeled 
+#' @param nodes_df A data.frame with, at least, columns labeled 
 #' "Taxon" (clade names, or non-clade groups of OTUs), 
 #' "use" (which OTUs will be used, "yes" or "no"; blanks etc. mean "yes") 
 #' "mono" Is the group monophyletic? "yes" or "no". Only "yes" will be used
@@ -576,7 +576,7 @@ add_in_clades <- function(tmp_tree, names_of_groups, list_of_subtrees_w_good_bra
 #' column headers.  This is the exact command used by construct_starting_tree():
 #' readWorksheetFromFile(xlsfn, sheet="nodes", startRow=15)
 #'
-#' @taxa_df A data.frame with, at least, columns listing the OTUs that 
+#' @param taxa_df A data.frame with, at least, columns listing the OTUs that 
 #' go into each clade. The column headers are the names of the clades.
 #' construct_starting_tree() assumes that one column will have ALL of the 
 #' OTUs, and will be named "total_group_LCA". This clade represents the 
@@ -593,15 +593,15 @@ add_in_clades <- function(tmp_tree, names_of_groups, list_of_subtrees_w_good_bra
 #' column headers.  This is the exact command used by construct_starting_tree():
 #' readWorksheetFromFile(xlsfn, sheet="taxa", startRow=15)
 #' 
-#' @xlsfn If the above inputs are NULL, then OTUs_df, nodes_df, and taxa_df
+#' @param xlsfn If the above inputs are NULL, then OTUs_df, nodes_df, and taxa_df
 #' can be read from an Excel file formated according to the BEASTmasteR
 #' example settings file.
 #' 
-#' @min_brlen During construction of the starting tree, all internal 
+#' @param min_brlen During construction of the starting tree, all internal 
 #' (non-tip) branchlengths will be min_brlen=0.001 (default). Changing 
 #' this will make these larger, but might cause difficulties if you have 
 #' node-date constraints that are close together
-#' @outfn Write the tree to this file, if not "" (default is "", i.e. blank)
+#' @param outfn Write the tree to this file, if not "" (default is "", i.e. blank)
 construct_starting_tree <- function(OTUs_df=NULL, taxa_df=NULL, nodes_df=NULL, xlsfn=NULL, min_brlen=0.0001, outfn="")
 	{
 	defaults='
