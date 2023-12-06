@@ -1,3 +1,18 @@
+
+This repository adds a package structure to BeastMasteR, allowing the code
+to be installed with
+
+```r
+# Install required packages if necessary
+install.packages("XML")
+install.packages("devtools")
+
+# Then install BeastMasteR
+devtools::install_github("ms609/BeastMasteR") # case sensitive
+```
+
+# BeastMasteR
+
 The purpose of "BEASTmasteR" is to convert NEXUS data file(s) (DNA, amino acids,
 discrete morphological characters, and/or continuous traits), plus an Excel
 settings file, into Beast2 XML format.

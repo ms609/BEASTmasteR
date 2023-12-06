@@ -1,13 +1,14 @@
 Package: BeastMasteR
 Title: Write Beast2 XML (especially morphology/tip-dating)
 Version: 0.0.0.9000
-Authors: Code by nmatzke; packaged by Martin R. Smith 
+Authors: Code by Nicholas J. Matzke (@nmatzke); packaged by Martin R. Smith 
 License: GPL3
-Description: To follow.
+Description: Enables tip-dating analyses using fossils as dated terminal taxa.
+  The Birth-Death-Skyline-Serial-Sampling tree model is used (or the Sampled-Ancestors variant), enabling different birth, death, and sampling rates through time. However, it may be useful for setting up molecular-only analyses (particularly automated variants), for learning Beast2 XML (since the BEASTmasteR XML output is annotated and much easier for human reading than the BEAUTi output), or for automating such analyses. BEASTmasteR also contains functions for parsing Beast2 output, e.g. plotting a dated tree in R, with posterior probabilities, 95% HPDs on node dates, and also 95% HPDs on tip dates, if available.
 URL:
   https://github.com/ms609/BEASTmasteR,
   https://github.com/nmatzke/BEASTmasteR,
-  http://phylo.wikidot.com/beastmaster/
+  http://phylo.wikidot.com/beastmaster/,
 Depends: R (>= 3.5.0)
 Imports:
   grDevices,
